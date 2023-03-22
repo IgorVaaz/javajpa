@@ -15,7 +15,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories("com.curso.repository")
+@EnableJpaRepositories("com.utfpr.exemplowebconf1.repository")
 @EnableTransactionManagement
 public class SpringDataConfig {
 
@@ -26,8 +26,8 @@ public class SpringDataConfig {
 
         ds.setUser("root");
         ds.setPassword("root");
-        ds.setJdbcUrl("jdbc:mysql://localhost/curso-spring-db");
-        ds.setDriverClass("com.mysql.jdbc.Driver");
+        ds.setJdbcUrl("jdbc:h2:mem:teste");
+        ds.setDriverClass("org.h2.Driver");
         return ds;
     }
 
